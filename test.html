@@ -206,6 +206,71 @@
         align-items: center;
     }
 }
+
+/*  */
+/* This CSS is for the visual appearance, the sizing is handled by JS */
+.award-slide {
+    flex-shrink: 0;
+    height: 180px;
+    margin: 0 8px; /* Gap between slides */
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.award-slide-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.award-slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: white;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.award-slide:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.award-slide:hover .award-slide-overlay,
+.award-slide:hover .award-slide-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust if your answer text is very long */
+}
+.faq-item.active .faq-chevron svg {
+    transform: rotate(180deg);
+}
+.faq-item.active .faq-question span:first-child {
+    color: hsl(185, 95%, 33%); /* primary color */
+}
 </style>
 </head>
 <body class="min-h-screen bg-white font-sans">
@@ -1144,7 +1209,7 @@
                     <div class="w-full md:w-1/2 flex-shrink-0 px-4">
                         <div class="relative bg-white rounded-2xl shadow-lg p-8 h-full flex flex-col">
                            <div class="absolute top-6 right-8 w-20 h-20 text-slate-100">
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.99999 15.1709L19.3429 5.8279L20.7571 7.2421L9.99999 17.9992L3.63599 11.6352L5.04999 10.221L9.99999 15.1709Z"/></svg>
+                            
                            </div>
                            <blockquote class="mt-4 text-slate-600 leading-relaxed flex-grow">
                                "MediCare Plus has been a true partner in my health journey. The entire team—from the front desk to the doctors—goes above and beyond to make sure I feel comfortable and understood. I'm in great hands here."
@@ -1162,7 +1227,7 @@
                     <div class="w-full md:w-1/2 flex-shrink-0 px-4">
                         <div class="relative bg-white rounded-2xl shadow-lg p-8 h-full flex flex-col">
                            <div class="absolute top-6 right-8 w-20 h-20 text-slate-100">
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.99999 15.1709L19.3429 5.8279L20.7571 7.2421L9.99999 17.9992L3.63599 11.6352L5.04999 10.221L9.99999 15.1709Z"/></svg>
+                          
                            </div>
                            <blockquote class="mt-4 text-slate-600 leading-relaxed flex-grow">
                                "I've never experienced such compassionate care. From the front desk to the medical team, everyone at MediCare Plus made me feel like a priority. They explained everything in detail and made me feel at ease."
@@ -1180,7 +1245,7 @@
                     <div class="w-full md:w-1/2 flex-shrink-0 px-4">
                         <div class="relative bg-white rounded-2xl shadow-lg p-8 h-full flex flex-col">
                            <div class="absolute top-6 right-8 w-20 h-20 text-slate-100">
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.99999 15.1709L19.3429 5.8279L20.7571 7.2421L9.99999 17.9992L3.63599 11.6352L5.04999 10.221L9.99999 15.1709Z"/></svg>
+                              
                            </div>
                            <blockquote class="mt-4 text-slate-600 leading-relaxed flex-grow">
                                "The online appointment system is a game-changer! It's so easy to use, and I love getting reminders on my phone. The telemedicine consultations are also incredibly convenient for a busy professional like me."
@@ -1198,7 +1263,7 @@
                     <div class="w-full md:w-1/2 flex-shrink-0 px-4">
                         <div class="relative bg-white rounded-2xl shadow-lg p-8 h-full flex flex-col">
                            <div class="absolute top-6 right-8 w-20 h-20 text-slate-100">
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.99999 15.1709L19.3429 5.8279L20.7571 7.2421L9.99999 17.9992L3.63599 11.6352L5.04999 10.221L9.99999 15.1709Z"/></svg>
+                             
                            </div>
                            <blockquote class="mt-4 text-slate-600 leading-relaxed flex-grow">
                                "Accessing my medical records through the patient portal is incredibly secure and straightforward. It gives me peace of mind knowing all my health information is organized and accessible whenever I need it."
@@ -1233,7 +1298,7 @@
 
 
      <!-- Awards & Accreditations -->
-     <section class="py-16 bg-gray-50">
+     <!-- <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12" data-aos="fade-down">
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
@@ -1287,7 +1352,38 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+<section class="py-20 bg-slate-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto" data-aos="fade-up">
+        <div class="text-center mb-16 px-4">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 font-heading">
+                Awards & Accreditations
+            </h2>
+            <p class="mt-3 text-lg text-slate-600">
+                Recognized excellence in healthcare quality and patient safety
+            </p>
+        </div>
+
+        <div id="award-slider-wrapper" class="relative">
+            <div id="award-slider-container" class="overflow-hidden">
+                <div id="award-slider" class="flex">
+                    </div>
+            </div>
+            
+            <button id="award-slider-prev" class="absolute top-1/2 -translate-y-1/2 left-4 z-20 bg-white/80 backdrop-blur-sm text-slate-700 rounded-full w-10 h-10 flex items-center justify-center shadow-md transition hover:bg-white hover:scale-110">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button id="award-slider-next" class="absolute top-1/2 -translate-y-1/2 right-4 z-20 bg-white/80 backdrop-blur-sm text-slate-700 rounded-full w-10 h-10 flex items-center justify-center shadow-md transition hover:bg-white hover:scale-110">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
 
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1430,85 +1526,96 @@
     </section>
 
 
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12" data-aos="fade-down">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4 font-heading">Frequently Asked Questions</h2>
-                <p class="text-lg text-gray-600">Get answers to common questions about our services</p>
-            </div>
-            <div class="space-y-4">
-                <div class="border rounded-lg" data-aos="fade-up">
-                    <button onclick="toggleAccordion(0)" class="w-full text-left px-6 py-4 font-semibold text-gray-900 hover:bg-gray-50 flex justify-between items-center font-heading">
-                        How do I book an appointment online?
-                        <svg id="chevron-0" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+ <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 font-heading">
+                Frequently Asked Questions
+            </h2>
+            <p class="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
+                Have questions? We have answers. Find quick solutions to common queries about our services.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 gap-x-10" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-item py-6 border-b border-slate-200">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold text-slate-800">How do I book an appointment online?</span>
+                        <span class="faq-chevron text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
                     </button>
-                    <div id="content-0" class="accordion-content px-6 pb-4">
-                        <div class="text-gray-600">
-                            You can book an appointment by clicking the 'Book Appointment' button, selecting your preferred doctor, date, and time. You'll receive a confirmation email with all the details.
-                        </div>
+                    <div class="faq-answer">
+                        <p class="text-slate-600 leading-relaxed pt-4">
+                            You can easily book an appointment by clicking the "Book Appointment" button on our homepage. Then, select your desired doctor, choose an available time slot, and confirm your details. You will receive a confirmation via email and SMS.
+                        </p>
                     </div>
                 </div>
 
-                <div class="border rounded-lg" data-aos="fade-up">
-                    <button onclick="toggleAccordion(1)" class="w-full text-left px-6 py-4 font-semibold text-gray-900 hover:bg-gray-50 flex justify-between items-center font-heading">
-                        What insurance plans do you accept?
-                        <svg id="chevron-1" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                <div class="faq-item py-6 border-b border-slate-200">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold text-slate-800">What insurance plans do you accept?</span>
+                        <span class="faq-chevron text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
                     </button>
-                    <div id="content-1" class="accordion-content px-6 pb-4">
-                        <div class="text-gray-600">
-                            We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, and Medicare. Please verify with our billing department for specific coverage details.
-                        </div>
+                    <div class="faq-answer">
+                        <p class="text-slate-600 leading-relaxed pt-4">
+                            We accept a wide range of major insurance plans. For a detailed list, please visit our 'Insurance Partners' page or contact our billing department directly. We recommend verifying your coverage with us before your appointment.
+                        </p>
                     </div>
                 </div>
 
-                <div class="border rounded-lg" data-aos="fade-up">
-                    <button onclick="toggleAccordion(2)" class="w-full text-left px-6 py-4 font-semibold text-gray-900 hover:bg-gray-50 flex justify-between items-center font-heading">
-                        Can I access my medical records online?
-                        <svg id="chevron-2" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                <div class="faq-item py-6 border-b border-slate-200">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold text-slate-800">How can I access my medical records?</span>
+                        <span class="faq-chevron text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
                     </button>
-                    <div id="content-2" class="accordion-content px-6 pb-4">
-                        <div class="text-gray-600">
-                            Yes, through our secure patient portal, you can access your medical records, test results, prescription history, and appointment information 24/7.
-                        </div>
+                    <div class="faq-answer">
+                        <p class="text-slate-600 leading-relaxed pt-4">
+                           You can securely access your medical records, test results, and prescription history 24/7 through our online "Patient Portal." You can register for the portal at our front desk during your visit or by calling our support line.
+                        </p>
                     </div>
                 </div>
 
-                <div class="border rounded-lg" data-aos="fade-up">
-                    <button onclick="toggleAccordion(3)" class="w-full text-left px-6 py-4 font-semibold text-gray-900 hover:bg-gray-50 flex justify-between items-center font-heading">
-                        Do you offer telemedicine services?
-                        <svg id="chevron-3" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                <div class="faq-item py-6 border-b border-slate-200">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold text-slate-800">What should I do in an emergency?</span>
+                        <span class="faq-chevron text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
                     </button>
-                    <div id="content-3" class="accordion-content px-6 pb-4">
-                        <div class="text-gray-600">
-                            Yes, we provide virtual consultations for many conditions. You can schedule a telemedicine appointment through our online booking system or by calling our office.
-                        </div>
+                    <div class="faq-answer">
+                        <p class="text-slate-600 leading-relaxed pt-4">
+                            For any life-threatening medical emergency, please call your local emergency number (e.g., 999) immediately or go to the nearest emergency room. Our hospital's emergency department is open 24/7 for urgent medical needs.
+                        </p>
+                    </div>
+                </div>
+                
+                 <div class="faq-item py-6 border-b border-slate-200">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold text-slate-800">Are telemedicine services available?</span>
+                        <span class="faq-chevron text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="text-slate-600 leading-relaxed pt-4">
+                           Yes, we offer telemedicine or virtual consultations for many non-emergency conditions. This allows you to speak with a healthcare professional from the comfort of your home. You can book a telemedicine appointment through our online portal.
+                        </p>
                     </div>
                 </div>
 
-                <div class="border rounded-lg" data-aos="fade-up">
-                    <button onclick="toggleAccordion(4)" class="w-full text-left px-6 py-4 font-semibold text-gray-900 hover:bg-gray-50 flex justify-between items-center font-heading">
-                        What should I bring to my first appointment?
-                        <svg id="chevron-4" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="content-4" class="accordion-content px-6 pb-4">
-                        <div class="text-gray-600">
-                            Please bring a valid ID, insurance card, list of current medications, medical history, and any relevant medical records from previous healthcare providers.
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
 
     <section class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1575,7 +1682,7 @@
         </div>
     </section>
 
-    <section class="py-16 bg-primary text-white">
+    <!-- <section class="py-16 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-4 font-heading">Ready to Experience Better Healthcare?</h2>
             <p class="text-xl mb-8 opacity-90">
@@ -1596,7 +1703,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer class="bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -2000,6 +2107,145 @@ startHeroSliderAutoplay();
             resizeTimeout = setTimeout(initializeSlider, 250);
         });
     });
-    </script>
+// <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.getElementById('award-slider');
+    if (!slider) return;
+
+    const prevButton = document.getElementById('award-slider-prev');
+    const nextButton = document.getElementById('award-slider-next');
+
+    const awards = [
+        { title: 'Joint Commission Gold Seal', year: '2025', img: 'https://images.unsplash.com/photo-1581566340731-5321219b528a?auto=format&fit=crop&q=80&w=400' },
+        { title: '5-Star CMS Rating', year: '2024', img: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=400' },
+        { title: 'Magnet Recognition', year: '2024', img: 'https://images.unsplash.com/photo-1554497342-99bb999c0897?auto=format&fit=crop&q=80&w=400' },
+        { title: 'Top 100 Hospitals', year: '2024', img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=400' },
+        { title: 'Patient Safety Award', year: '2025', img: 'https://images.unsplash.com/photo-1521913626209-0fbf68f4c4b1?auto=format&fit=crop&q=80&w=400' },
+        { title: 'Excellence in Cardiology', year: '2024', img: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=400' },
+        { title: 'Best Workplace', year: '2025', img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=400' },
+        { title: 'Green Hospital Certification', year: '2024', img: 'https://images.unsplash.com/photo-1516222338279-22a432a03a69?auto=format&fit=crop&q=80&w=400' }
+    ];
+
+    let currentIndex;
+    let slideInterval;
+    let isTransitioning = false;
+    const transitionDuration = 500;
+    const clonesCount = 5; // Number of clones on each side for safety
+    let slides = [];
+
+    function initializeSlider() {
+        const originalSlides = awards.map(award => {
+            const slide = document.createElement('div');
+            slide.className = 'award-slide';
+            slide.style.backgroundImage = `url('${award.img}')`;
+            slide.innerHTML = `
+                <div class="award-slide-overlay"></div>
+                <div class="award-slide-info">
+                    <h4 class="font-semibold text-white text-lg font-heading">${award.title}</h4>
+                    <p class="text-sm text-white/80">${award.year}</p>
+                </div>
+            `;
+            return slide;
+        });
+
+        const clonesStart = originalSlides.slice(-clonesCount).map(c => c.cloneNode(true));
+        const clonesEnd = originalSlides.slice(0, clonesCount).map(c => c.cloneNode(true));
+        
+        slides = [...clonesStart, ...originalSlides, ...clonesEnd];
+        slider.innerHTML = '';
+        slider.append(...slides);
+        
+        currentIndex = clonesCount;
+        updateSliderWidth();
+        goToSlide(currentIndex, false);
+        startInterval();
+    }
+    
+    function updateSliderWidth() {
+        const viewportWidth = slider.parentElement.offsetWidth;
+        let slideWidth;
+        if (window.innerWidth < 640) slideWidth = viewportWidth / 2;
+        else if (window.innerWidth < 768) slideWidth = viewportWidth / 3;
+        else if (window.innerWidth < 1024) slideWidth = viewportWidth / 4;
+        else slideWidth = viewportWidth / 5;
+        
+        slider.style.width = `${slides.length * slideWidth}px`;
+        slides.forEach(s => s.style.width = `${slideWidth}px`);
+    }
+
+    function goToSlide(index, withAnimation = true) {
+        if (!withAnimation) slider.style.transition = 'none';
+        
+        const slideWidth = slides[0].offsetWidth;
+        slider.style.transform = `translateX(-${index * slideWidth}px)`;
+
+        if (!withAnimation) {
+            setTimeout(() => {
+                slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+            }, 50);
+        }
+    }
+
+    function handleSlide(direction) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex += direction;
+        goToSlide(currentIndex);
+        resetInterval();
+    }
+    
+    slider.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        // Jump logic for seamless loop
+        if (currentIndex < clonesCount) {
+            currentIndex = currentIndex + awards.length;
+            goToSlide(currentIndex, false);
+        }
+        if (currentIndex >= awards.length + clonesCount) {
+            currentIndex = currentIndex - awards.length;
+            goToSlide(currentIndex, false);
+        }
+    });
+
+    function startInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(() => handleSlide(1), 3000);
+    }
+    function resetInterval() {
+        clearInterval(slideInterval);
+        startInterval();
+    }
+
+    // --- Event Listeners ---
+    nextButton.addEventListener('click', () => handleSlide(1));
+    prevButton.addEventListener('click', () => handleSlide(-1));
+    
+    // --- Initialization & Resize Handling ---
+    initializeSlider();
+    window.addEventListener('resize', initializeSlider);
+});
+
+
+// <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const questionButton = item.querySelector('.faq-question');
+
+        questionButton.addEventListener('click', () => {
+            const currentlyActive = document.querySelector('.faq-item.active');
+            
+            if (currentlyActive && currentlyActive !== item) {
+                currentlyActive.classList.remove('active');
+            }
+
+            item.classList.toggle('active');
+        });
+    });
+});
+</script>
+
 </body>
 </html>

@@ -296,26 +296,37 @@
                     Our team of dedicated professionals is the heart of our institution, driving our mission forward with passion and expertise.
                 </p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <img class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400" alt="Dr. Evelyn Reed">
-                    <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Evelyn Reed</h3>
-                    <p class="text-primary font-semibold">Chief Medical Officer</p>
-                    <p class="mt-4 text-slate-500 text-sm">With over 20 years of experience, Dr. Reed is a pioneer in cardiac surgery and a leader in medical innovation.</p>
+              <div id="doctor-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-name="Dr. Evelyn Reed" data-department="Cardiology">
+                    <img class="w-full h-56 object-cover object-top" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400" alt="Dr. Evelyn Reed">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Evelyn Reed</h3>
+                        <p class="mt-1 text-primary font-semibold">Chief Cardiologist</p>
+                        <a href="doctor-profile.html" class="mt-6 inline-block w-full px-6 py-3 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition">View Profile</a>
+                    </div>
                 </div>
-                 <div class="bg-white rounded-2xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="200">
-                    <img class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" src="https://images.unsplash.com/photo-1622253692010-33352da69e0d?auto=format&fit=crop&q=80&w=400" alt="Dr. Marcus Chen">
-                    <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Marcus Chen</h3>
-                    <p class="text-primary font-semibold">Head of Pediatrics</p>
-                    <p class="mt-4 text-slate-500 text-sm">Dr. Chen is renowned for his compassionate approach to pediatric care and his research in child development.</p>
+
+                
+                
+                 <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-name="Dr. James Wilson" data-department="Orthopedics">
+                    <img class="w-full h-56 object-cover object-top" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400" alt="Dr. James Wilson">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold font-heading text-gray-900">Dr. James Wilson</h3>
+                        <p class="mt-1 text-primary font-semibold">Orthopedic Surgeon</p>
+                        <a href="doctor-profile.html" class="mt-6 inline-block w-full px-6 py-3 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition">View Profile</a>
+                    </div>
                 </div>
-                 <div class="bg-white rounded-2xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=400" alt="Dr. Anya Sharma">
-                    <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Anya Sharma</h3>
-                    <p class="text-primary font-semibold">Director of Research</p>
-                    <p class="mt-4 text-slate-500 text-sm">A leading neurologist, Dr. Sharma spearheads our research initiatives, pushing the boundaries of medical science.</p>
+
+                <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-name="Dr. Olivia Grant" data-department="Dermatology">
+                    <img class="w-full h-56 object-cover object-top" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400" alt="Dr. Olivia Grant">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Olivia Grant</h3>
+                        <p class="mt-1 text-primary font-semibold">Senior Dermatologist</p>
+                        <a href="doctor-profile.html" class="mt-6 inline-block w-full px-6 py-3 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition">View Profile</a>
+                    </div>
                 </div>
-            </div>
+
+                </div>
         </div>
     </section>
 
@@ -383,6 +394,33 @@
         </div>
     </div>
 </section>
+
+   <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20 rounded-lg p-8 text-center" data-aos="fade-zoom-in">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 font-heading">Stay Updated with Health News</h3>
+                <p class="text-gray-600 mb-6">
+                    Get the latest health tips, medical news, and hospital updates delivered to your inbox
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email address"
+                        class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                    />
+                    <button class="inline-flex items-center justify-center px-6 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Subscribe
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 mt-4">
+                    By subscribing, you agree to our privacy policy and consent to receive updates.
+                </p>
+            </div>
+        </div>
+    </section>
 
 
 

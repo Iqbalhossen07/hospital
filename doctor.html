@@ -45,22 +45,67 @@
 </head>
 <body class="bg-slate-50 font-sans">
 
-    <header class="bg-white/80 backdrop-blur-sm shadow-sm border-b border-gray-200/80 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-             <a href="index.html" class="flex items-center space-x-2">
-                <div class="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
-                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+   <header class="bg-white shadow-sm border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900 font-heading">MediCare Plus</h1>
+                        <p class="text-xs text-gray-500">Advanced Healthcare Management</p>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-primary border-b-2 border-primary transition-colors hover:text-primary">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">About</a>
+                    <a href="doctor.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Doctors</a>
+                    <a href="services.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Services</a>
+                    <a href="departments.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Department</a>
+                    <a href="donation.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Donation</a>
+                    <a href="contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button class="hidden sm:flex items-center px-4 py-2 bg-red-600 text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Emergency
+                    </button>
+                    
+                    <button id="mobileMenuBtn" class="md:hidden p-2">
+                        <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
                 </div>
-                <div>
-                    <h1 class="text-xl font-bold text-gray-900 font-heading">MediCare Plus</h1>
-                </div>
-            </a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Home</a>
-                <a href="about.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">About</a>
-                <a href="#" class="text-sm font-medium text-primary border-b-2 border-primary">Doctors</a>
-                <a href="#" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Contact</a>
-            </nav>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+              <a href="index.html" class="text-sm font-medium text-primary border-b-2 border-primary transition-colors hover:text-primary">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">About</a>
+                    <a href="doctor.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Doctors</a>
+                    <a href="services.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Services</a>
+                    <a href="departments.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Department</a>
+                    <a href="donation.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Donation</a>
+                    <a href="contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Contact</a>
+                <button class="w-full mt-4 flex items-center justify-center px-4 py-2 bg-red-600 text-white text-sm font-medium rounded-lg">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    Emergency: 911
+                </button>
+            </div>
         </div>
     </header>
 
@@ -92,43 +137,23 @@
 
     <section class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div id="doctor-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div id="doctor-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
                 <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-name="Dr. Evelyn Reed" data-department="Cardiology">
                     <img class="w-full h-56 object-cover object-top" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400" alt="Dr. Evelyn Reed">
                     <div class="p-6 text-center">
                         <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Evelyn Reed</h3>
                         <p class="mt-1 text-primary font-semibold">Chief Cardiologist</p>
-                        <p class="mt-4 text-sm text-slate-500">20+ years of experience in pioneering cardiac surgery and patient care.</p>
                         <a href="#" class="mt-6 inline-block w-full px-6 py-3 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition">View Profile</a>
                     </div>
                 </div>
 
-                <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-name="Dr. Marcus Chen" data-department="Pediatrics">
-                    <img class="w-full h-56 object-cover object-top" src="https://images.unsplash.com/photo-1622253692010-33352da69e0d?auto=format&fit=crop&q=80&w=400" alt="Dr. Marcus Chen">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Marcus Chen</h3>
-                        <p class="mt-1 text-primary font-semibold">Head of Pediatrics</p>
-                        <p class="mt-4 text-sm text-slate-500">Renowned for his compassionate approach to pediatric and child development.</p>
-                        <a href="#" class="mt-6 inline-block w-full px-6 py-3 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition">View Profile</a>
-                    </div>
-                </div>
-
-                <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-name="Dr. Anya Sharma" data-department="Neurology">
-                    <img class="w-full h-56 object-cover object-top" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=400" alt="Dr. Anya Sharma">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Anya Sharma</h3>
-                        <p class="mt-1 text-primary font-semibold">Lead Neurologist</p>
-                        <p class="mt-4 text-sm text-slate-500">Spearheads our research initiatives, pushing the boundaries of medical science.</p>
-                        <a href="#" class="mt-6 inline-block w-full px-6 py-3 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition">View Profile</a>
-                    </div>
-                </div>
+                
                 
                  <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-name="Dr. James Wilson" data-department="Orthopedics">
                     <img class="w-full h-56 object-cover object-top" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400" alt="Dr. James Wilson">
                     <div class="p-6 text-center">
                         <h3 class="text-xl font-bold font-heading text-gray-900">Dr. James Wilson</h3>
                         <p class="mt-1 text-primary font-semibold">Orthopedic Surgeon</p>
-                        <p class="mt-4 text-sm text-slate-500">Specializes in sports medicine and minimally invasive joint replacement surgeries.</p>
                         <a href="#" class="mt-6 inline-block w-full px-6 py-3 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition">View Profile</a>
                     </div>
                 </div>
@@ -138,7 +163,6 @@
                     <div class="p-6 text-center">
                         <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Olivia Grant</h3>
                         <p class="mt-1 text-primary font-semibold">Senior Dermatologist</p>
-                        <p class="mt-4 text-sm text-slate-500">Expert in cosmetic dermatology and advanced skin care treatments.</p>
                         <a href="#" class="mt-6 inline-block w-full px-6 py-3 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition">View Profile</a>
                     </div>
                 </div>
@@ -151,9 +175,58 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+     <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="flex items-center justify-center w-8 h-8 bg-primary rounded-lg">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold font-heading">MediCare Plus</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Advanced healthcare management system providing comprehensive medical services
+                        and patient care solutions.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 font-heading">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#appointments" class="hover:text-white transition-colors">Book Appointment</a></li>
+                        <li><a href="#doctors" class="hover:text-white transition-colors">Find Doctors</a></li>
+                        <li><a href="#emergency" class="hover:text-white transition-colors">Emergency Services</a></li>
+                        <li><a href="#telemedicine" class="hover:text-white transition-colors">Telemedicine</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 font-heading">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#laboratory" class="hover:text-white transition-colors">Laboratory</a></li>
+                        <li><a href="#pharmacy" class="hover:text-white transition-colors">Pharmacy</a></li>
+                        <li><a href="#reports" class="hover:text-white transition-colors">Medical Reports</a></li>
+                        <li><a href="#health-tracking" class="hover:text-white transition-colors">Health Tracking</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 font-heading">Contact Info</h4>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>📞 Emergency: 911</p>
+                        <p>📞 General: (555) 123-4567</p>
+                        <p>✉️ contact@medicareplus.com</p>
+                        <p>📍 123 Healthcare Ave, Medical City, MC 12345</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 MediCare Plus. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
         </div>
     </footer>
 

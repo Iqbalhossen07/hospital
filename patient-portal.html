@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal - MediCare Plus</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(185, 95%, 33%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(195, 100%, 48%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        success: {
+                            DEFAULT: 'hsl(142, 76%, 36%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        warning: {
+                            DEFAULT: 'hsl(38, 92%, 50%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lora', 'serif'],
+                        heading: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 font-sans">
+
+    <div class="min-h-screen flex">
+        <div class="hidden lg:flex w-1/2 bg-primary text-white p-12 flex-col justify-between relative overflow-hidden">
+            <div data-aos="fade-right">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="flex items-center justify-center w-10 h-10 bg-white/20 rounded-lg">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h1 class="text-xl font-bold font-heading">MediCare Plus</h1>
+                </a>
+                
+                <div class="mt-16">
+                    <h2 class="text-4xl font-bold font-heading">Your Health, At Your Fingertips.</h2>
+                    <p class="mt-4 text-white/80 text-lg leading-relaxed">
+                        Securely access your medical records, view test results, manage appointments, and communicate with your care team—all in one place.
+                    </p>
+                </div>
+            </div>
+            
+            <p class="text-sm text-white/50">&copy; 2025 MediCare Plus. All rights reserved.</p>
+
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-white/5 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12">
+            <div class="w-full max-w-md" data-aos="fade-left">
+                <div class="lg:hidden text-center mb-8">
+                     <a href="index.html" class="inline-flex items-center space-x-2">
+                        <div class="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <h1 class="text-xl font-bold font-heading text-gray-900">MediCare Plus</h1>
+                    </a>
+                </div>
+                
+                <h2 class="text-3xl font-bold text-gray-900 font-heading">Patient Portal Login</h2>
+                <p class="mt-3 text-slate-600">Welcome back! Please enter your details.</p>
+
+                <form class="mt-8 space-y-6">
+                    <div>
+                        <label for="email" class="font-semibold text-slate-700">Patient ID or Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required class="mt-2 w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary transition" placeholder="e.g., patient123@email.com">
+                    </div>
+                    <div>
+                        <label for="password" class="font-semibold text-slate-700">Password</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required class="mt-2 w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary transition" placeholder="••••••••">
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-primary focus:ring-primary border-slate-300 rounded">
+                            <label for="remember-me" class="ml-2 block text-sm text-slate-700">Remember me</label>
+                        </div>
+                        <div class="text-sm">
+                            <a href="#" class="font-semibold text-primary hover:underline">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 hover:-translate-y-1">
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+
+                <p class="mt-8 text-center text-slate-600">
+                    Don't have an account? 
+                    <a href="#" class="font-semibold text-primary hover:underline">Register Now</a>
+                </p>
+
+                 <p class="mt-12 text-center text-sm text-slate-500">
+                    Having trouble logging in? <br> Call our support at <a href="tel:+880123456789" class="font-semibold text-primary hover:underline">+880-123-456789</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+</body>
+</html>

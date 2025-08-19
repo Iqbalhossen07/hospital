@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - 5 Simple Lifestyle Changes for a Healthier Heart</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(185, 95%, 33%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(195, 100%, 48%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        success: {
+                            DEFAULT: 'hsl(142, 76%, 36%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        warning: {
+                            DEFAULT: 'hsl(38, 92%, 50%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lora', 'serif'],
+                        heading: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        #reading-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: hsl(185, 95%, 33%);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    
+    <div id="reading-progress-bar"></div>
+
+    <header class="bg-white/80 backdrop-blur-sm shadow-sm border-b border-gray-200/80 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+             <a href="index.html" class="flex items-center space-x-2">
+                <div class="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <h1 class="text-xl font-bold text-gray-900 font-heading">MediCare Plus</h1>
+            </a>
+            </div>
+    </header>
+
+    <main class="py-16 lg:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <p class="text-sm font-semibold text-primary uppercase">Cardiology</p>
+                <h1 class="mt-4 text-3xl md:text-5xl font-bold text-gray-900 font-heading leading-tight">
+                    5 Simple Lifestyle Changes for a Healthier Heart
+                </h1>
+                <div class="mt-6 flex justify-center items-center space-x-4 text-slate-500">
+                    <div class="flex items-center gap-3">
+                        <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=100" alt="Dr. Evelyn Reed">
+                        <span>By Dr. Evelyn Reed</span>
+                    </div>
+                    <span class="text-slate-300">|</span>
+                    <span>August 19, 2025</span>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1544365558-35aa4afcf11f?auto=format&fit=crop&q=80&w=1200" alt="Heart Health" class="w-full h-auto max-h-[500px] object-cover rounded-2xl shadow-xl mt-12" data-aos="fade-up" data-aos-delay="100">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 lg:mt-20">
+             <article id="article-content" class="max-w-3xl mx-auto text-lg text-slate-600 leading-relaxed space-y-8" data-aos="fade-up">
+                <p>Maintaining a healthy heart doesn't require a complete life overhaul. By incorporating a few simple, evidence-based habits into your daily routine, you can significantly reduce your risk of cardiovascular disease and improve your overall well-being. Here are five key lifestyle changes recommended by our top cardiologists.</p>
+                
+                <h2 class="text-3xl font-bold font-heading text-gray-900 !mt-12">1. Embrace a Heart-Healthy Diet</h2>
+                <p>What you eat has a direct impact on your heart. Focus on a diet rich in fruits, vegetables, whole grains, and lean proteins. Try to limit your intake of processed foods, sugary drinks, and saturated fats. The Mediterranean diet is an excellent example of a heart-healthy eating plan.</p>
+                
+                <blockquote class="border-l-4 border-primary pl-6 py-2 my-8 text-xl italic text-gray-900 font-heading">
+                    "The human body is designed to move. Consistent physical activity is one of the most powerful tools we have for preventing chronic disease."
+                </blockquote>
+
+                <h2 class="text-3xl font-bold font-heading text-gray-900 !mt-12">2. Get Moving Regularly</h2>
+                <p>Regular exercise strengthens your heart muscle and helps maintain a healthy weight. Aim for at least 150 minutes of moderate-intensity aerobic exercise, like brisk walking or cycling, each week. Even small changes, like taking the stairs instead of the elevator, can make a big difference.</p>
+
+                <h2 class="text-3xl font-bold font-heading text-gray-900 !mt-12">3. Prioritize Quality Sleep</h2>
+                <p>Sleep is not a luxury; it's a necessity for heart health. During sleep, your body repairs itself, and your blood pressure and heart rate decrease. Aim for 7-9 hours of quality sleep per night. If you suffer from sleep apnea, seek treatment, as it can significantly increase your risk of heart problems.</p>
+            </article>
+        </div>
+    </main>
+    
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 font-heading mb-8 text-center" data-aos="fade-up">You Might Also Like</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <a href="#" class="group block bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800" alt="Article Image">
+                    <div class="p-6">
+                        <p class="text-sm font-semibold text-primary">Nutrition</p>
+                        <h3 class="mt-2 text-xl font-bold text-gray-900 font-heading group-hover:text-primary transition-colors">The Power of a Balanced Diet</h3>
+                    </div>
+                </a>
+                 <a href="#" class="group block bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800" alt="Article Image">
+                    <div class="p-6">
+                        <p class="text-sm font-semibold text-primary">Mental Wellness</p>
+                        <h3 class="mt-2 text-xl font-bold text-gray-900 font-heading group-hover:text-primary transition-colors">Finding Calm in a Busy World</h3>
+                    </div>
+                </a>
+                 <a href="#" class="group block bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1518611507436-f1381c61d3c5?auto=format&fit=crop&q=80&w=800" alt="Article Image">
+                    <div class="p-6">
+                        <p class="text-sm font-semibold text-primary">Pediatrics</p>
+                        <h3 class="mt-2 text-xl font-bold text-gray-900 font-heading">A Guide to Childhood Vaccinations</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        // Reading Progress Bar Logic
+        const progressBar = document.getElementById('reading-progress-bar');
+        const articleContent = document.getElementById('article-content');
+
+        function updateProgressBar() {
+            if (!articleContent) return;
+            
+            const contentTop = articleContent.offsetTop;
+            const contentHeight = articleContent.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollableHeight = contentHeight - windowHeight;
+            const scrollTop = window.scrollY;
+
+            let percentScrolled = 0;
+            if (scrollTop > contentTop && scrollableHeight > 0) {
+                percentScrolled = ((scrollTop - contentTop) / scrollableHeight) * 100;
+            }
+            percentScrolled = Math.min(100, Math.max(0, percentScrolled)); // Clamp between 0 and 100
+            
+            progressBar.style.width = percentScrolled + '%';
+        }
+
+        window.addEventListener('scroll', updateProgressBar);
+    </script>
+</body>
+</html>

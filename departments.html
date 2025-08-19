@@ -42,6 +42,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/fevicon.PNG" type="image/x-icon">
+
 </head>
 <body class="bg-slate-50 font-sans">
 
@@ -98,6 +100,7 @@
                     <a href="services.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Services</a>
                     <a href="departments.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Department</a>
                     <a href="donation.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Donation</a>
+                    <a href="blog.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Blog</a>
                     <a href="contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Contact</a>
                 </nav>
 
@@ -129,6 +132,7 @@
                 <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Services</a>
                 <a href="departments.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Department</a>
                 <a href="donation.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Donation</a>
+                <a href="blog.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Blog</a>
                 <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Contact</a>
                 <button class="w-full mt-4 flex items-center justify-center px-4 py-2 bg-red-600 text-white text-sm font-medium rounded-lg">
                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -239,7 +243,7 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white">
+ <footer class="bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
@@ -280,10 +284,10 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4 font-heading">Contact Info</h4>
                     <div class="space-y-2 text-sm text-gray-400">
-                        <p>📞 Emergency: 911</p>
-                        <p>📞 General: (555) 123-4567</p>
+                        <p>📞 Emergency: +40000000000</p>
+                        <p>📞 General: +40000000000</p>
                         <p>✉️ contact@medicareplus.com</p>
-                        <p>📍 123 Healthcare Ave, Medical City, MC 12345</p>
+                        <p>📍 123 Healthcare Ave, Medical City, London,UK</p>
                     </div>
                 </div>
             </div>
@@ -300,6 +304,18 @@
             duration: 800,
             once: true,
             offset: 100,
+        });
+
+           // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
         });
     </script>
 </body>

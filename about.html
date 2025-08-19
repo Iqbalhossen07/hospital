@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MediCare Plus</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(185, 95%, 33%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(195, 100%, 48%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        success: {
+                            DEFAULT: 'hsl(142, 76%, 36%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        },
+                        warning: {
+                            DEFAULT: 'hsl(38, 92%, 50%)',
+                            foreground: 'hsl(0, 0%, 100%)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lora', 'serif'],
+                        heading: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #about-us-slider-container {
+    perspective: 1000px;
+}
+.slide {
+    transform-origin: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+/* For the connecting arrow on desktop */
+@media (min-width: 768px) {
+    .timeline-card-left::before {
+        content: '';
+        position: absolute;
+        top: 24px;
+        right: -8px;
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid white;
+    }
+    .timeline-card-right::before {
+        content: '';
+        position: absolute;
+        top: 24px;
+        left: -8px;
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid white;
+    }
+}
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white font-sans">
+
+    <header class="bg-white/80 backdrop-blur-sm shadow-sm border-b border-gray-200/80 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+             <a href="index.html" class="flex items-center space-x-2">
+                <div class="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-900 font-heading">MediCare Plus</h1>
+                </div>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Home</a>
+                <a href="#" class="text-sm font-medium text-primary border-b-2 border-primary">About</a>
+                <a href="#" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Doctors</a>
+                <a href="#" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+   <section class="relative py-20 lg:py-32 bg-slate-50 overflow-hidden">
+    <div class="absolute top-1/4 left-10 w-80 h-80 bg-primary/10 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-accent/10 rounded-full filter blur-3xl opacity-50 animate-pulse" style="animation-delay: 2s;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <p class="text-sm font-bold text-primary uppercase tracking-widest font-heading mb-4">ABOUT MEDICARE PLUS</p>
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 font-heading leading-tight">
+                    Combining Medical Excellence with a Human Touch
+                </h1>
+                <p class="mt-6 text-xl text-slate-600">
+                    Welcome to MediCare Plus, where your health and well-being are at the heart of everything we do. We've built a sanctuary of healing that integrates cutting-edge technology with compassionate care. Discover our story, our mission, and our unwavering commitment to your health.
+                </p>
+            </div>
+            <div data-aos="fade-left" class="w-full h-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
+                <div id="about-us-slider" class="relative w-full h-full">
+                    <div id="about-us-slider-container" class="relative w-full h-full overflow-hidden">
+                        <div id="about-us-slides" class="flex w-full h-full transition-transform duration-500 ease-in-out">
+                            <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=1200" alt="Hospital Team" class="slide w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1598228837614-993929226523?auto=format&fit=crop&q=80&w=1200" alt="Modern Hospital Interior" class="slide w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1581566340731-5321219b528a?auto=format&fit=crop&q=80&w=1200" alt="Medical Professionals" class="slide w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <button id="about-us-slider-prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/50 backdrop-blur-sm text-gray-700 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="about-us-slider-next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/50 backdrop-blur-sm text-gray-700 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-sm font-bold text-primary uppercase tracking-widest font-heading mb-4">WHO WE ARE</p>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 font-heading">Your Trusted Partner in Lifelong Health</h2>
+                    <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                        MediCare Plus was born from a desire to create a healthcare experience that is both remarkably advanced and deeply personal. We are more than just a hospital; we are a dedicated team of innovators, caregivers, and community members united by a single purpose: to provide care that you can trust, for every stage of life.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bg-slate-50 p-6 rounded-2xl text-center">
+                        <p class="text-4xl lg:text-5xl font-bold text-primary font-heading">15+</p>
+                        <p class="mt-2 text-slate-600">Years of Service</p>
+                    </div>
+                     <div class="bg-slate-50 p-6 rounded-2xl text-center">
+                        <p class="text-4xl lg:text-5xl font-bold text-primary font-heading">50k+</p>
+                        <p class="mt-2 text-slate-600">Patients Healed</p>
+                    </div>
+                     <div class="bg-slate-50 p-6 rounded-2xl text-center">
+                        <p class="text-4xl lg:text-5xl font-bold text-primary font-heading">200+</p>
+                        <p class="mt-2 text-slate-600">Expert Staff</p>
+                    </div>
+                     <div class="bg-slate-50 p-6 rounded-2xl text-center">
+                        <p class="text-4xl lg:text-5xl font-bold text-primary font-heading">98%</p>
+                        <p class="mt-2 text-slate-600">Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-bold text-white font-heading">Our Core Values</h2>
+                <p class="mt-3 text-lg text-gray-400 max-w-2xl mx-auto">The principles that guide every decision we make.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 border border-white/10 rounded-2xl text-center transition-all duration-300 hover:border-primary/50 hover:bg-white/5" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold font-heading text-white">Compassion</h3>
+                    <p class="mt-3 text-gray-400">We treat every patient with empathy, kindness, and respect.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-2xl text-center transition-all duration-300 hover:border-primary/50 hover:bg-white/5" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold font-heading text-white">Excellence</h3>
+                    <p class="mt-3 text-gray-400">We strive for the highest standards in all aspects of clinical care.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-2xl text-center transition-all duration-300 hover:border-primary/50 hover:bg-white/5" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold font-heading text-white">Integrity</h3>
+                    <p class="mt-3 text-gray-400">We adhere to the highest ethical principles and transparency.</p>
+                </div>
+                 <div class="p-8 border border-white/10 rounded-2xl text-center transition-all duration-300 hover:border-primary/50 hover:bg-white/5" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-bold font-heading text-white">Innovation</h3>
+                    <p class="mt-3 text-gray-400">We embrace technology and research to advance patient care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 font-heading">Meet Our Leadership</h2>
+                <p class="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
+                    Our team of dedicated professionals is the heart of our institution, driving our mission forward with passion and expertise.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400" alt="Dr. Evelyn Reed">
+                    <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Evelyn Reed</h3>
+                    <p class="text-primary font-semibold">Chief Medical Officer</p>
+                    <p class="mt-4 text-slate-500 text-sm">With over 20 years of experience, Dr. Reed is a pioneer in cardiac surgery and a leader in medical innovation.</p>
+                </div>
+                 <div class="bg-white rounded-2xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" src="https://images.unsplash.com/photo-1622253692010-33352da69e0d?auto=format&fit=crop&q=80&w=400" alt="Dr. Marcus Chen">
+                    <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Marcus Chen</h3>
+                    <p class="text-primary font-semibold">Head of Pediatrics</p>
+                    <p class="mt-4 text-slate-500 text-sm">Dr. Chen is renowned for his compassionate approach to pediatric care and his research in child development.</p>
+                </div>
+                 <div class="bg-white rounded-2xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=400" alt="Dr. Anya Sharma">
+                    <h3 class="text-xl font-bold font-heading text-gray-900">Dr. Anya Sharma</h3>
+                    <p class="text-primary font-semibold">Director of Research</p>
+                    <p class="mt-4 text-slate-500 text-sm">A leading neurologist, Dr. Sharma spearheads our research initiatives, pushing the boundaries of medical science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 font-heading">Our Journey of Growth</h2>
+            <p class="mt-3 text-lg text-slate-600">Key milestones in our commitment to healthcare excellence.</p>
+        </div>
+        
+        <div class="relative">
+            <div class="absolute left-4 md:left-1/2 w-0.5 h-full bg-primary/20"></div>
+
+            <div class="relative mb-12" data-aos="fade-right">
+                <div class="absolute left-4 md:left-1/2 w-12 h-12 bg-primary/10 rounded-full -translate-x-1/2 flex items-center justify-center border-4 border-slate-50">
+                    <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18" /></svg>
+                </div>
+                <div class="w-full md:w-1/2 md:pr-16 ml-12 md:ml-0 md:text-right">
+                    <div class="bg-white p-6 rounded-xl shadow-lg timeline-card-right transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <p class="text-primary font-bold text-xl">2010</p>
+                        <h3 class="text-2xl font-bold font-heading text-gray-900 mt-1">Foundation Laid</h3>
+                        <p class="mt-2 text-slate-600">MediCare Plus was founded with the vision to provide world-class healthcare to the community.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative mb-12" data-aos="fade-left">
+                <div class="absolute left-4 md:left-1/2 w-12 h-12 bg-primary/10 rounded-full -translate-x-1/2 flex items-center justify-center border-4 border-slate-50">
+                    <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
+                </div>
+                <div class="w-full md:w-1/2 md:ml-auto md:pl-16 ml-12 md:text-left">
+                     <div class="bg-white p-6 rounded-xl shadow-lg timeline-card-left transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <p class="text-primary font-bold text-xl">2015</p>
+                        <h3 class="text-2xl font-bold font-heading text-gray-900 mt-1">Advanced Cardiology Wing</h3>
+                        <p class="mt-2 text-slate-600">Opened our state-of-the-art center for cardiac care, equipped with the latest technology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative mb-12" data-aos="fade-right">
+                <div class="absolute left-4 md:left-1/2 w-12 h-12 bg-primary/10 rounded-full -translate-x-1/2 flex items-center justify-center border-4 border-slate-50">
+                    <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 0 0-1.06l-1.5-1.5a.75.75 0 0 0-1.06 0L12 8.69 7.28 3.97a.75.75 0 0 0-1.06 0l-1.5 1.5a.75.75 0 0 0 0 1.06l4.72 4.72-4.72 4.72a.75.75 0 0 0 0 1.06l1.5 1.5a.75.75 0 0 0 1.06 0L12 15.31l4.72 4.72a.75.75 0 0 0 1.06 0l1.5-1.5a.75.75 0 0 0 0-1.06l-4.72-4.72Z" /></svg>
+                </div>
+                <div class="w-full md:w-1/2 md:pr-16 ml-12 md:ml-0 md:text-right">
+                    <div class="bg-white p-6 rounded-xl shadow-lg timeline-card-right transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <p class="text-primary font-bold text-xl">2020</p>
+                        <h3 class="text-2xl font-bold font-heading text-gray-900 mt-1">Telemedicine Launch</h3>
+                        <p class="mt-2 text-slate-600">Introduced virtual consultations to make healthcare more accessible for everyone, everywhere.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative" data-aos="fade-left">
+                <div class="absolute left-4 md:left-1/2 w-12 h-12 bg-primary/10 rounded-full -translate-x-1/2 flex items-center justify-center border-4 border-slate-50">
+                    <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.311a15.045 15.045 0 0 1-7.5 0C4.508 19.64 2.25 15.184 2.25 10.5 2.25 5.858 6.388 2.25 11.25 2.25c4.862 0 9 3.608 9 7.932 0 1.865-.54 3.56-1.428 5.004Z" /></svg>
+                </div>
+                <div class="w-full md:w-1/2 md:ml-auto md:pl-16 ml-12 md:text-left">
+                    <div class="bg-white p-6 rounded-xl shadow-lg timeline-card-left transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <p class="text-primary font-bold text-xl">2024</p>
+                        <h3 class="text-2xl font-bold font-heading text-gray-900 mt-1">Research & Innovation Hub</h3>
+                        <p class="mt-2 text-slate-600">Established a dedicated hub for medical research to pioneer future treatments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 MediCare Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+//   <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const sliderContainer = document.getElementById('about-us-slider-container');
+    const slidesContainer = document.getElementById('about-us-slides');
+    const slides = document.querySelectorAll('#about-us-slides .slide');
+    const prevButton = document.getElementById('about-us-slider-prev');
+    const nextButton = document.getElementById('about-us-slider-next');
+
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    let intervalId;
+    const intervalTime = 5000;
+
+    function updateSlider() {
+        const translateX = -currentIndex * 100 + '%';
+        slidesContainer.style.transform = `translateX(${translateX})`;
+    }
+
+    function goToSlide(index) {
+        currentIndex = (index + slideCount) % slideCount;
+        updateSlider();
+        resetInterval();
+    }
+
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+
+    function startInterval() {
+        intervalId = setInterval(nextSlide, intervalTime);
+    }
+
+    function resetInterval() {
+        clearInterval(intervalId);
+        startInterval();
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    startInterval();
+});
+</script>
+</body>
+</html>
